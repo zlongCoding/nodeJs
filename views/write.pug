@@ -1,0 +1,15 @@
+extends ./layouts/default
+
+block title
+  title 文章
+block styles
+  link(href="https://cdn.bootcss.com/summernote/0.8.10/summernote.css" rel="stylesheet")
+  script(src='https://cdn.bootcss.com/summernote/0.8.10/summernote.min.js')
+  script(src="https://cdn.bootcss.com/summernote/0.8.10/lang/summernote-zh-CN.min.js")
+
+block content
+  include ./includes/header
+  <div class="summernote"></div>
+  <div style="text-align: center;margin-top: 30px;"><button type="button" class="btn btn-success">提交</button></div>
+  include ./includes/footer
+  script(src='js/write.js')

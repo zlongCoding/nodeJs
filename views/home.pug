@@ -1,0 +1,12 @@
+extends ./layouts/default
+
+block title
+  title 首页
+block styles
+  link(href="css/home.css" rel="stylesheet")
+
+block content
+  include ./includes/header
+  include ./includes/content
+  include ./includes/footer
+  script(src='js/home.js')

@@ -1,0 +1,15 @@
+<main role="main" class="container">
+  div !{content.contentCode}
+  <form>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">评论</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" maxlength = "300" required placeholder="评论"></textarea>
+    </div>
+    <div class="div-submit">
+      <input class="btn btn-primary" type="button" value="提交"/>
+    </div>
+  </form>
+  each item in comments
+    div.media.text-muted.pt-3
+      p.media-body.pb-3.mb-0.small.lh-125.border-bottom.border-gray #{item.content}
+</main>

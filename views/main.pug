@@ -1,0 +1,12 @@
+extends ./layouts/default
+
+block title
+  title 文章
+block styles
+  link(href="main.css" rel="stylesheet")
+  
+block content
+  include ./includes/header
+  include ./includes/articl
+  include ./includes/footer
+  script(src='main.js')

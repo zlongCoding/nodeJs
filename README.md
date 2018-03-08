@@ -1,2 +1,0 @@
-# express-blog
-突然想用node写一个博客网站，本来选择的是koa，但是因为express使用的人群要比koa2多所以就先用express写了一个简易的，因为我对koa2的前景非常看好

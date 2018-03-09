@@ -1,0 +1,17 @@
+{
+	"restartable": "rs",
+	"ignore":[
+    ".git",
+    ".svn",
+    "node_modules/**/node_modules"
+	],
+	"verbose": true,
+	"exrcMap": {
+		"js": "node --harmony"
+	},
+	"watch": [
+    "server/",
+    "src/"
+	],
+	"ext": "js json"
+}

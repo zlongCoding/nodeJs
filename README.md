@@ -41,32 +41,41 @@ yarn or npm
 
 ```
 node服务 启动命令
+
 npm run server
 
 爬取豆瓣数据到本地
+
 npm run movie
+
 
 爬取每个豆瓣列表的的视频
 
 npm run trailer
 
+
 数据库数据
 
 npm run api
+
 
 将图片和视频上传到七牛
 
 npm run qiniu
 
+
 前端启动项目
+
 npm run dev
+
+
 打包前端项目
+
 npm run build
 ```
 
-由于本身是前端的所以前端项目简单说一下
 ### 前端
-框架基于``react``，ui模板基于阿里的``antd``利用require的特性可以实现懒加载项目具体看``src/components/async_load.js``
+框架基于``react``，ui模板基于阿里的``antd``，重点是利用require的特性可以实现懒加载项目具体看``src/components/async_load.js``
 ### 后端
 基于``koa2+mongoose``
 #### mongoose
@@ -74,4 +83,4 @@ npm run build
 由于mongoose几个版本的api的使用方式不同，如果使用最新的话，请查看官网
 #### koa2
 
-这里重点说一下koa，项目中使用了很多的函数式编程，如果不了解的建议买一本看一看，还有一些es6的知识建议看阮一峰老师的es6入门，重点看 修饰器函数， 这也许是 三个简单项目中最重要的一个知识点。
+项目中使用了很多的函数式编程，如果不了解的建议买一本[javaScript函数式编程](http://product.dangdang.com/23742619.html)，还有一些es6的知识建议看[阮一峰老师的es6入门](http://es6.ruanyifeng.com/#docs/decorator)，重点看 修饰器函数， 这也许是 三个简单项目中最重要的一个知识点，因为这个提案可以叫我们想java一样写接口，而不用像以前那么苦逼了。

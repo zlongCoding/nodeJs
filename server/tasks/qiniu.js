@@ -1,22 +1,22 @@
 const qiniu = require('qiniu')
 const mongoose = require('mongoose')
 const nanoid = require('nanoid')
-const config = require('../config')
+import config from '../config'
 
+console.log(config.qiniu)
 const bucket = config.qiniu.bucket
 const mac = new qiniu.auth.digest.Mac(config.qiniu.AK, config.qiniu.SK)
-const cfg = new qiniu.conf.Config()
-const client = new qiniu.rs.BucketManager(mac, cfg)
+const qiniuConfig = new qiniu.conf.Config()
+const bucketManager = new qiniu.rs.BucketManager(mac, qiniuConfig)
 
 const Movie = mongoose.model('Movie')
 
-const uploadToQiniu = async (url, key) => {
+const uploadToQiniu = async(url, key) => {
   return new Promise((resolve, reject) => {
-    client.fetch(url, bucket, key, (err, ret, info) => {
+    bucketManager.fetch(url, bucket, key, (err, ret, info) => {
       if (err) {
         reject(err)
-      }
-      else {
+      } else {
         if (info.statusCode === 200) {
           resolve({ key })
         } else {
@@ -27,15 +27,15 @@ const uploadToQiniu = async (url, key) => {
   })
 }
 
-;(async () => {
+;
+(async() => {
   let movies = await Movie.find({
     $or: [
-      {videoKey: {$exists: false}},
-      {videoKey: null},
-      {videoKey: ''}
+      { videoKey: { $exists: false } },
+      { videoKey: null },
+      { videoKey: '' }
     ]
   }).exec()
-
 
   for (let i = 0; i < movies.length; i++) {
     let movie = movies[i]
@@ -66,3 +66,4 @@ const uploadToQiniu = async (url, key) => {
     }
   }
 })()
+

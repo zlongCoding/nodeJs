@@ -13,7 +13,7 @@ const Movie = mongoose.model('Movie')
   }).exec()
 
   let invoked = false
-  let script = resolve(__dirname, '../crawler/video')
+  let script = resolve(__dirname, './crawler/video')
   let child = cp.fork(script, [])
 
   child.on('error', err => {

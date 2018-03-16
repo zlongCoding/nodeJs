@@ -11,7 +11,7 @@ export const addLogger = app => {
 }
 
 export const addSession = app => {
-  app.keys = ['imooc-trailer']
+  app.keys = ['douban-trailer']
 
   const CONFIG = {
     key: 'koa:sess', /** (string) cookie key (default is koa:sess) */

@@ -7,7 +7,6 @@ const sleep = (time) => new Promise(resolve => {
   setTimeout(resolve, time)
 })
 
-// https://github.com/GoogleChrome/puppeteer/issues/290
 process.on('message', async (movies) => { 
   console.log('开始访问目标页面')
   const browser = await puppeteer.launch({

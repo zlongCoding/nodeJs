@@ -120,3 +120,19 @@ export const Auth = convert(async (ctx, next) => {
   }
   await next()
 })
+
+export const admin = role => convert(async (ctx, next) => {
+  const { role } = ctx.session.user 
+  if (!role || role !== 'admin') {
+    return (
+      ctx.body = {
+        success: false,
+        errCode: 403,
+        errMsg: '您没有权限'
+      }
+    )
+  }
+  await next()
+})
+
+

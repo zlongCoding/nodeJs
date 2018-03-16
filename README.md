@@ -25,7 +25,7 @@
 进入server/config目录配置相关信息，包括七牛云账号，MongoDB地址（如果没有加入权限，用户名，密码等。默认是本地的27017端口）启动项目端口等等
 进入src/config 七牛云的地址
 
-以上配置，可以都不配置，项目也能跑起来
+以上配置，可以都不配置，项目也能跑起来，但是没有数据。。所以如果没有七牛的话，去注册一个。。。
 
 >第二步
 
@@ -40,10 +40,6 @@ yarn or npm
 启动命令
 
 ```
-node服务 启动命令
-
-npm run server
-
 爬取豆瓣数据到本地
 
 npm run movie
@@ -54,7 +50,7 @@ npm run movie
 npm run trailer
 
 
-数据库数据
+查看数据库数据
 
 npm run api
 
@@ -72,8 +68,13 @@ npm run dev
 打包前端项目
 
 npm run build
-```
 
+
+node服务 启动命令
+
+npm run server
+
+因为没数据，所以建议先去爬去数据， ``npm run qiniu``这个命令不用执行，因为害怕豆瓣那边地址改变造成图片和视频加载失败所以上传到七牛，
 ### 前端
 框架基于``react``，ui模板基于阿里的``antd``，重点是利用require的特性可以实现懒加载项目具体看``src/components/async_load.js``
 ### 后端

@@ -87,3 +87,10 @@ npm run server
 
 项目中使用了很多的函数式编程，如果不了解的建议买一本[javaScript函数式编程](http://product.dangdang.com/23742619.html)，还有一些es6的知识建议看[阮一峰老师的es6入门](http://es6.ruanyifeng.com/#docs/decorator)，重点看 修饰器函数， 这也许是 三个简单项目中最重要的一个知识点，因为这个提案可以叫我们想java一样写接口，而不用像以前那么苦逼了。
 
+### 项目发布
+
+基于pm2实现自动化脚本
+
+
+``ecosystem.config.js``脚本文件
+具体的pm2命令， 请移步[pm2](https://github.com/Unitech/pm2)

@@ -1,5 +1,6 @@
 node 基于豆瓣爬虫的项目
 
+![express-blog](https://github.com/zhanglongdream/nodeJs/tree/express-blog)
 
 ```
 ├── server                  node代码

@@ -1,7 +1,7 @@
 node 基于豆瓣爬虫的项目
 
 
-
+```
 ├── server
 │   ├── config
 │   │   └── env
@@ -15,3 +15,4 @@ node 基于豆瓣爬虫的项目
 │   └── tasks
 │       └── crawler
 └── src
+```

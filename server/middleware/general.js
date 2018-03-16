@@ -1,6 +1,7 @@
 import bodyParser from 'koa-bodyparser'
 import session from 'koa-session'
 import logger from 'koa-logger'
+import cors from 'koa2-cors'
 
 export const addBodyParser = app => {
   app.use(bodyParser())
@@ -9,6 +10,11 @@ export const addBodyParser = app => {
 export const addLogger = app => {
   app.use(logger())
 }
+
+export const addCors = app => {
+  app.use(cors())
+}
+
 
 export const addSession = app => {
   app.keys = ['douban-trailer']

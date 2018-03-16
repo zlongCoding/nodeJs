@@ -3,9 +3,9 @@ export default {
   port: 3000,
   base: 'http://localhost:3000',
   qiniu: {
-    bucket: 'movie',
-    video: '',
-    AK: '',
-    SK: ''
+    bucket: 'bucket',
+    video: 'url地址',
+    AK: 'AccessKey',
+    SK: 'SecretKey'
   }
 }

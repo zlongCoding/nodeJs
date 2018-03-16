@@ -36,10 +36,9 @@ const uploadToQiniu = async(url, key) => {
       { videoKey: '' }
     ]
   }).exec()
-
+  console.log(movies.length)
   for (let i = 0; i < movies.length; i++) {
     let movie = movies[i]
-
     if (movie.video && !movie.videoKey) {
       try {
         let videoData = await uploadToQiniu(movie.video, nanoid() + '.mp4')

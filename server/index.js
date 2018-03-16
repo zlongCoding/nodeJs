@@ -4,7 +4,6 @@ import chalk from 'chalk'
 import config from './config'
 import { join } from 'path'
 
-
 const MIDDLEWARES = ['database', 'general', 'router']
 
 const useMiddlewares = (app) => {
@@ -19,10 +18,8 @@ const useMiddlewares = (app) => {
   )(MIDDLEWARES)
 }
 
-console.log(process.env.GREET === 'movies')
 async function start() {
   const app = new Koa()
-
   const { port } = config
   await useMiddlewares(app)
   

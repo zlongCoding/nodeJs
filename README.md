@@ -2,7 +2,7 @@ node 基于豆瓣爬虫的项目
 
 
 ```
-├── server
+├── server                  node代码
 │   ├── config
 │   │   └── env
 │   ├── crawler
@@ -12,7 +12,7 @@ node 基于豆瓣爬虫的项目
 │   ├── middleware
 │   ├── routes
 │   ├── service
-│   └── tasks
+│   └── tasks           爬虫
 │       └── crawler
 └── src
 ```
